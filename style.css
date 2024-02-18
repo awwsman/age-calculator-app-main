@@ -1,0 +1,149 @@
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+  --ff: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff);
+}
+
+main {
+  min-height: 100vh;
+  /* margin: 0 auto; */
+  padding: 5rem 0;
+  background-color: var(--Off-white);
+}
+
+.calculator {
+  /* border: 2px solid red; */
+  max-width: 375px;
+  width: 90vw;
+  margin: 0 auto;
+  background-color: var(--White);
+  border-radius: 1rem 1rem 5rem 1rem;
+  padding: 2.5rem 1.5rem;
+}
+.input-field {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 2px solid var(--Light-grey);
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: 2px solid var(--Light-grey);
+}
+.error input {
+  border: 2px solid var(--Light-red);
+}
+.input-field > div {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.input-field label {
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  color: var(--Smokey-grey);
+}
+.error label {
+  color: var(--Light-red);
+}
+.input-field p {
+  color: var(--Light-red);
+  font-weight: 400;
+  font-style: italic;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.error p {
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  background-color: var(--Purple);
+  padding: 1rem;
+  border-radius: 5rem;
+  width: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -30px;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+.disp {
+  margin: 3rem 0rem 0 0;
+  font-weight: 800;
+  font-style: italic;
+  padding: 1rem 0;
+  line-height: 3rem;
+  font-size: 3.5rem;
+}
+
+.disp span {
+  color: var(--Purple);
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}
+
+@media screen and (width>1200px) {
+  .calculator {
+    max-width: 1440px;
+    width: 50vw;
+    border-bottom-right-radius: 10rem;
+    padding: 2.5rem;
+  }
+
+  .input-field {
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .input-field input {
+    width: 150px;
+    padding: 0.6rem;
+    font-size: 1.7rem;
+  }
+
+  .arrow {
+    left: 70%;
+    width: 80px;
+    margin-top: -40px;
+    height: 80px;
+  }
+  .disp {
+    margin: 1rem 0 0 0;
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
