@@ -28,11 +28,9 @@ function calculator() {
 
   if (currMonth >= userInputMonth.value) {
     mnt = currMonth - userInputMonth.value;
-    console.log(getDayNum());
   } else {
     yr--;
     mnt = currMonth + 12 - userInputMonth.value;
-    Math.console.log(getDayNum());
   }
   if (currDay >= userInputDay.value) {
     dy = currDay - userInputDay.value;
